@@ -15,7 +15,6 @@ type AnimationStyle =
   | "from-right"
   | "fade"
   | "top-in-bottom-out"
-  | "left-in-right-out"
 
 interface HeroVideoProps {
   animationStyle?: AnimationStyle
@@ -55,6 +54,11 @@ const animationVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
     exit: { opacity: 0 },
+  },
+  "top-in-bottom-out": {
+    initial: { y: "-100%", opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+    exit: { y: "100%", opacity: 0 },
   },
 }
 
