@@ -65,7 +65,7 @@ const MainContent: React.FC = () => {
   const { content } = useLanguage()
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-emerald-800 to-emerald-500 shadow-md rounded-md">
+    <div className="min-h-screen  rounded-md">
       <header className="fixed top-0 w-full bg-emerald-800/80 backdrop-blur-sm z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="mt-3">
@@ -76,45 +76,49 @@ const MainContent: React.FC = () => {
       </header>
 
       <main className="pt-16">
-        <section className="relative w-full h-[90vh] overflow-hidden">
-          <Swiper
-            modules={[Pagination, Autoplay]}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            loop
-            className="w-full h-full"
-          >
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index} className="relative w-full h-full">
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="brightness-75"
-                />
+        <section className="relative w-full h-[90vh] rounded-xl shadow-md">
+          <div className="w-full h-full overflow-hidden rounded-xl"> {/* Evita o scroll horizontal */}
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              loop
+              className="w-full h-full "
+            >
+              {slides.map((slide, index) => (
+                <SwiperSlide key={index} className="relative w-full h-full rounded-xl overflow-hidden">
+                  <Image
+                    src={slide.image}
+                    alt={slide.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="brightness-75"
+                  />
 
-                <div className="absolute inset-0 flex items-center justify-center px-6 md:px-12">
-                  <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-xl text-center max-w-3xl border border-white/20">
-                    <h1 className="text-4xl md:text-5xl font-bold text-[#62D84E] drop-shadow-lg">
-                      {slide.title}
-                    </h1>
-                    <p className="text-lg md:text-xl text-white mt-4">
-                      {slide.description}
-                    </p>
-                    <button
-                      className="mt-6 bg-[#62D84E] text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-emerald-500 transition-transform transform hover:scale-105"
-                    >
-                      Explorar Agora 🚀
-                    </button>
+                  <div className="absolute inset-0 flex items-center justify-center px-6 md:px-12">
+                    <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-xl text-center max-w-3xl border border-white/20">
+                      <h1 className="text-4xl md:text-5xl font-bold text-[#62D84E] drop-shadow-lg">
+                        {slide.title}
+                      </h1>
+                      <p className="text-lg md:text-xl text-white mt-4">
+                        {slide.description}
+                      </p>
+                      <button
+                        className="mt-6 bg-[#62D84E] text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-emerald-500 transition-transform transform hover:scale-105"
+                      >
+                        Explorar Agora 🚀
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </section>
 
-        <section id="about" className="relative min-h-screen flex items-center justify-center py-20 md:py-32">
+
+
+        <section id="about" className="relative min-h-screen flex items-center justify-center py-20 md:py-32 shadow-md mr-3 ml-3 mt-3 rounded-xl overflow-hidden">
           {/* Imagem de fundo */}
           <Image
             src={Back}
@@ -122,11 +126,11 @@ const MainContent: React.FC = () => {
             layout="fill"
             objectFit="cover"
             quality={100}
-            className="absolute inset-0 z-0"
+            className="absolute inset-0 z-0 rounded-xl "
           />
 
           {/* Overlay para melhorar a legibilidade do texto */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#004d2d] to-[#1b5e20] opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#004d2d] to-[#1b5e20] opacity-80 rounded-xl"></div>
 
           {/* Conteúdo */}
           <div className="relative z-10 container mx-auto px-4 text-center space-y-8">
@@ -135,7 +139,8 @@ const MainContent: React.FC = () => {
             <HeroVideoDialogPlay.HeroVideoDialogDemo />
           </div>
         </section>
-        <section id="apps" className="relative min-h-screen flex items-center justify-center py-20 md:py-32 shadow-md">
+
+        <section id="apps" className="relative min-h-screen flex items-center justify-center py-20 md:py-32 shadow-md mr-3 ml-3 mt-3 rounded-xl overflow-hidden">
           {/* Imagem de fundo */}
           <Image
             src={Users}
@@ -143,11 +148,11 @@ const MainContent: React.FC = () => {
             layout="fill"
             objectFit="cover"
             quality={100}
-            className="absolute inset-0 z-0"
+            className="absolute inset-0 z-0 rounded-xl"
           />
 
           {/* Overlay para melhorar a legibilidade do conteúdo */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#004d2d] to-[#1b5e20] opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#004d2d] to-[#1b5e20] opacity-80 rounded-xl"></div>
 
           {/* Conteúdo */}
           <div className="relative z-10 container mx-auto px-4 text-center space-y-12">
@@ -189,7 +194,7 @@ const MainContent: React.FC = () => {
           </div>
         </section>
 
-        <section id="contact" className="relative min-h-screen flex items-center justify-center py-16 sm:py-20 md:py-32">
+        <section id="contact" className="relative min-h-screen flex items-center justify-center py-16 sm:py-20 md:py-32 rounded-xl overflow-hidden mx-3 shadow-md mr-3 ml-3 mt-3">
           {/* Imagem de fundo */}
           <Image
             src={Grupo}
@@ -197,11 +202,11 @@ const MainContent: React.FC = () => {
             layout="fill"
             objectFit="cover"
             quality={100}
-            className="absolute inset-0 z-0"
+            className="absolute inset-0 z-0 rounded-xl"
           />
 
           {/* Overlay para melhorar a legibilidade do conteúdo */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#004d2d] to-[#1b5e20] opacity-80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#004d2d] to-[#1b5e20] opacity-80 rounded-xl"></div>
 
           {/* Conteúdo */}
           <div className="relative z-10 container flex flex-col gap-10 sm:gap-16 md:gap-20 text-center">

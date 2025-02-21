@@ -69,12 +69,15 @@ export default function RootLayout({
         <meta name="description" content="Soluções tecnológicas inovadoras e sustentáveis para um futuro mais verde e sustentável" />
         <meta name="keywords" content="líder em tecnologia sustentável, soluções ambientais, impacto positivo, inovação verde, sustentabilidade, futuro verde, tecnologia para o meio ambiente" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-       
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-emerald-800 to-emerald-500` } >
+
         {children}
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
         <div className="elfsight-app-0f3273d0-4429-4263-b4b1-d3a8e03063fb" data-elfsight-app-lazy></div>
-        <FooterComponent />
+        <div>
+          <FooterComponent />
+        </div>
+
       </body>
     </html>
   );

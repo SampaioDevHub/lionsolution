@@ -68,7 +68,7 @@ export function LoadingScene({ onLoadingComplete }: LoadingSceneProps) {
     // Inicia a animação
     tl.play();
 
-    // Simula o fim do carregamento após 3 segundos
+    //  fim do carregamento após 3 segundos
     const timer = setTimeout(() => {
       onLoadingComplete()
     }, 3000);
