@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Card } from "@/components/ui/card"
+import Bandeira01 from "@/components/assets/brasil.svg"
 
 export default function LanguageSelector() {
   return (
@@ -12,17 +13,17 @@ export default function LanguageSelector() {
 
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
           <LanguageButton
-            flag="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20de%20Tela%20(126)-DJlKzos78ZbsZPp2gHEIHrOv2d15ng.png"
+            flag={Bandeira01}
             language="Português"
             onClick={() => console.log("Selected Portuguese")}
           />
           <LanguageButton
-            flag="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20de%20Tela%20(126)-DJlKzos78ZbsZPp2gHEIHrOv2d15ng.png"
+            flag={Bandeira01}
             language="English"
             onClick={() => console.log("Selected English")}
           />
           <LanguageButton
-            flag="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20de%20Tela%20(126)-DJlKzos78ZbsZPp2gHEIHrOv2d15ng.png"
+            flag={Bandeira01}
             language="Español"
             onClick={() => console.log("Selected Spanish")}
           />

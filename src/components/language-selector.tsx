@@ -15,17 +15,17 @@ const languages: LanguageOption[] = [
   {
     code: "pt-BR",
     label: "Português",
-    flag: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20de%20Tela%20(126)-DJlKzos78ZbsZPp2gHEIHrOv2d15ng.png",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg",
   },
   {
     code: "en-US",
     label: "English",
-    flag: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20de%20Tela%20(126)-DJlKzos78ZbsZPp2gHEIHrOv2d15ng.png",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
   },
   {
     code: "es-ES",
     label: "Español",
-    flag: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20de%20Tela%20(126)-DJlKzos78ZbsZPp2gHEIHrOv2d15ng.png",
+    flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_the_First_Spanish_Republic.svg/1024px-Flag_of_the_First_Spanish_Republic.svg.png",
   },
 ]
 
