@@ -31,7 +31,7 @@ interface ContentData {
     home: string
     about: string
     apps: string
-    contact: string
+    contact: string  
   }
 }
 

@@ -12,6 +12,9 @@ import Background from '@/components/assets/smart-farming-with-agriculture-iot.j
 import Background1 from '@/components/assets/3447494.jpg'
 import Background2 from '@/components/assets/digital-screen-with-environment-day.jpg'
 import Team from "@/components/assets/tech-people-trying-achieve-ambitious-sustainability-goals.jpg"
+import Back from "@/components/assets/Home.jpg"
+import Users from "@/components/assets/Apoie-se.png"
+import Grupo from "@/components/assets/group-businesspeople-working-graph-office.jpg"
 import Logo from '@/components/assets/Group 26620.svg'
 import Image from 'next/image'
 
@@ -63,7 +66,7 @@ const MainContent: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-800 to-emerald-500 shadow-md rounded-md">
-      <header className="fixed top-0 w-full bg-emerald-800/80 backdrop-blur-sm z-10">
+      <header className="fixed top-0 w-full bg-emerald-800/80 backdrop-blur-sm z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="mt-3">
             <Image src={Logo} alt="Logo" width={250} height={250} />
@@ -111,16 +114,43 @@ const MainContent: React.FC = () => {
           </Swiper>
         </section>
 
-        <section id="about" className="min-h-screen flex items-center justify-center py-20 md:py-32 bg-gradient-to-r from-[#004d2d] to-[#1b5e20]">
-          <div className="container mx-auto px-4 text-center space-y-8">
+        <section id="about" className="relative min-h-screen flex items-center justify-center py-20 md:py-32">
+          {/* Imagem de fundo */}
+          <Image
+            src={Back}
+            alt="Descrição da imagem"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            className="absolute inset-0 z-0"
+          />
+
+          {/* Overlay para melhorar a legibilidade do texto */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#004d2d] to-[#1b5e20] opacity-80"></div>
+
+          {/* Conteúdo */}
+          <div className="relative z-10 container mx-auto px-4 text-center space-y-8">
             <h2 className="text-3xl md:text-5xl font-bold text-white">{content.aboutTitle}</h2>
             <p className="text-lg md:text-xl max-w-2xl mx-auto text-white/90">{content.aboutText}</p>
             <HeroVideoDialogPlay.HeroVideoDialogDemo />
           </div>
         </section>
+        <section id="apps" className="relative min-h-screen flex items-center justify-center py-20 md:py-32 shadow-md">
+          {/* Imagem de fundo */}
+          <Image
+            src={Users}
+            alt="Descrição da imagem"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            className="absolute inset-0 z-0"
+          />
 
-        <section id="apps" className="min-h-screen flex items-center justify-center py-20 md:py-32 bg-gradient-to-r from-[#004d2d] to-[#1b5e20] shadow-md">
-          <div className="container mx-auto px-4 text-center space-y-12">
+          {/* Overlay para melhorar a legibilidade do conteúdo */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#004d2d] to-[#1b5e20] opacity-80"></div>
+
+          {/* Conteúdo */}
+          <div className="relative z-10 container mx-auto px-4 text-center space-y-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
               {content.appsTitle}
             </h2>
@@ -159,8 +189,22 @@ const MainContent: React.FC = () => {
           </div>
         </section>
 
-        <section id="contact" className="min-h-screen flex items-center justify-center py-16 sm:py-20 md:py-32 bg-gradient-to-r from-[#004d2d] to-[#1b5e20]">
-          <div className="container flex flex-col gap-10 sm:gap-16 md:gap-20 text-center">
+        <section id="contact" className="relative min-h-screen flex items-center justify-center py-16 sm:py-20 md:py-32">
+          {/* Imagem de fundo */}
+          <Image
+            src={Grupo}
+            alt="Imagem de fundo"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            className="absolute inset-0 z-0"
+          />
+
+          {/* Overlay para melhorar a legibilidade do conteúdo */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#004d2d] to-[#1b5e20] opacity-80"></div>
+
+          {/* Conteúdo */}
+          <div className="relative z-10 container flex flex-col gap-10 sm:gap-16 md:gap-20 text-center">
             <div className="flex flex-col gap-6">
               <h1 className="text-3xl sm:text-4xl lg:text-7xl font-bold text-white tracking-wide animate__animated animate__fadeIn">
                 A Inovação Começa Aqui
@@ -169,11 +213,12 @@ const MainContent: React.FC = () => {
                 Empoderando empresas por meio de tecnologia de ponta e design. Junte-se a nós para construir um futuro sustentável hoje.
               </p>
             </div>
+
             <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 relative p-6 sm:p-8 backdrop-blur-lg">
               <div className="relative p-8 bg-gradient-to-br from-[#2f6a4f] to-[#004d2d] backdrop-blur-lg border border-white/30 rounded-2xl shadow-xl hover:scale-105 transition duration-300 ease-in-out">
                 <Image
                   src={Team}
-                  alt="placeholder"
+                  alt="Equipe"
                   className="max-w-full max-h-96 rounded-2xl object-cover"
                   width={500}
                   height={500}
@@ -194,6 +239,7 @@ const MainContent: React.FC = () => {
                 </div>
               </div>
             </div>
+
             <div className="flex flex-col gap-8 sm:gap-10 md:gap-16 text-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white animate__animated animate__fadeInUp">
                 Pioneirismo em Soluções Tecnológicas Sustentáveis
@@ -202,6 +248,7 @@ const MainContent: React.FC = () => {
                 Acreditamos no poder da tecnologia para criar um futuro sustentável. Veja como estamos moldando o meio ambiente com inovação.
               </p>
             </div>
+
             <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-3 mr-5 ml-5">
               <div className="flex flex-col p-8 bg-gradient-to-br from-[#2f6a4f] to-[#004d2d] backdrop-blur-lg border border-white/30 rounded-2xl shadow-xl hover:scale-105 transition duration-300 ease-in-out text-center">
                 <div className="mb-5 flex items-center justify-center rounded-2xl bg-white/20 p-4">
@@ -233,7 +280,6 @@ const MainContent: React.FC = () => {
             </div>
           </div>
         </section>
-
       </main>
     </div>
   )
